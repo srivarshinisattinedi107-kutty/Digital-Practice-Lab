@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safety Quiz - Digital Practice Lab</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Navbar with Language Dropdown -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+        <i class="bi bi-mortarboard-fill fs-4"></i>
+        <span>Digital Practice Lab</span>
+      </a>
+      
+      <div class="d-flex align-items-center gap-3">
+        <!-- Language Selector -->
+        <div class="d-flex align-items-center bg-white bg-opacity-10 px-2 py-1 rounded-3">
+          <i class="bi bi-translate text-white me-2"></i>
+          <select id="languageSelect" onchange="changeQuizLanguage(this.value)" class="form-select form-select-sm border-0 bg-transparent text-white fw-semibold" style="cursor: pointer; width: auto;">
+            <option value="en" class="text-dark" selected>English</option>
+            <option value="hi" class="text-dark">हिन्दी (Hindi)</option>
+            <option value="te" class="text-dark">తెలుగు (Telugu)</option>
+          </select>
+        </div>
+
+        <a href="index.html" class="btn btn-outline-light btn-sm rounded-pill">
+          <i class="bi bi-arrow-left me-1"></i> Dashboard
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Quiz Container -->
+  <main class="container py-5 my-auto" style="max-width: 700px;">
+    
+    <div class="text-center mb-4">
+      <span class="badge rounded-pill bg-white shadow-sm px-3 py-2 fw-semibold mb-2" style="color: #6366F1; border: 1px solid rgba(99, 102, 241, 0.2);">
+        Interactive Security Test
+      </span>
+      <h1 class="fw-bold display-5" style="color: #0F172A;" id="quiz-title">Digital Safety Quiz</h1>
+      <p class="text-muted fs-6" id="quiz-subtitle">Answer one question at a time to complete the test.</p>
+    </div>
+
+    <!-- Result Banner -->
+    <div id="quiz-result" class="mb-4"></div>
+
+    <!-- Quiz Card Wrapper -->
+    <div class="card p-4 shadow-sm border-0 position-relative">
+      
+      <!-- Progress Bar -->
+      <div class="progress mb-4" style="height: 8px;">
+        <div id="quiz-progress-bar" class="progress-bar bg-primary" role="progressbar" style="width: 10%;"></div>
+      </div>
+
+      <!-- Question Counter & Display Container -->
+      <div id="quiz-container"></div>
+
+      <!-- Step Navigation Buttons -->
+      <div id="quiz-controls" class="d-flex justify-content-between align-items-center mt-4">
+        <button id="prev-btn" onclick="prevQuestion()" class="btn btn-outline-secondary px-4 py-2 rounded-pill" disabled>
+          <i class="bi bi-arrow-left me-1"></i> Previous
+        </button>
+
+        <button id="next-btn" onclick="nextQuestion()" class="btn btn-primary px-4 py-2 rounded-pill">
+          Next <i class="bi bi-arrow-right ms-1"></i>
+        </button>
+
+        <button id="submit-btn" onclick="submitSafetyQuiz()" class="btn btn-success px-4 py-2 rounded-pill d-none">
+          Submit Quiz <i class="bi bi-check-circle ms-1"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Restart Option -->
+    <div class="text-center mt-4">
+      <button onclick="initSafetyQuiz()" class="btn btn-link text-decoration-none text-muted">
+        <i class="bi bi-shuffle me-1"></i> Restart & Re-shuffle Questions
+      </button>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-3 text-center mt-auto">
+    <div class="container">
+      <small>© 2026 Digital Practice Lab. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/simulators.js"></script>
+</body>
+</html>

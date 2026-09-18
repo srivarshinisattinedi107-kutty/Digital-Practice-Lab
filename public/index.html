@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Practice Lab | Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Hide native Google Translate top banner & elements */
+    #google_translate_element, .goog-te-banner-frame, .skiptranslate {
+      display: none !important;
+    }
+    body { top: 0px !important; }
+  </style>
+</head>
+<body>
+  <!-- Ambient Background Decorative Orbs -->
+<div style="position: fixed; top: -100px; left: -100px; width: 350px; height: 350px; background: rgba(75, 108, 183, 0.12); filter: blur(80px); border-radius: 50%; pointer-events: none; z-index: -1;"></div>
+<div style="position: fixed; bottom: -100px; right: -100px; width: 400px; height: 400px; background: rgba(142, 197, 252, 0.18); filter: blur(90px); border-radius: 50%; pointer-events: none; z-index: -1;"></div>
+  <!-- Hidden Google Translate Element -->
+  <div id="google_translate_element"></div>
+
+  <!-- Navigation Bar with Language Selection -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand fw-bold" href="index.html">Digital Practice Lab</a>
+      
+      <div class="d-flex align-items-center gap-3">
+        <!-- Language Selector -->
+        <div class="d-flex align-items-center">
+          <span class="text-white me-2 small">🌐 Language:</span>
+          <select id="navLangSelect" class="form-select form-select-sm rounded-pill px-3 fw-bold"></select>
+        </div>
+        <a href="dashboard.html" class="btn btn-outline-light btn-sm rounded-pill fw-bold">My Dashboard</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <header class="bg-light py-5 border-bottom">
+    <div class="container text-center">
+      <h1 class="fw-bold text-primary display-5 mb-2">Master Digital Services with Confidence</h1>
+      <p class="lead text-muted max-w-600 mx-auto mb-4">
+        Practice creating email accounts, using simulated ATMs, submitting online forms with OTPs, making digital payments, and testing cyber safety.
+      </p>
+      <a href="dashboard.html" class="btn btn-primary btn-lg rounded-pill px-4 fw-bold shadow-sm">View Practice Dashboard</a>
+    </div>
+  </header>
+
+  <!-- Module Cards Section (5 Practice Modules) -->
+  <main class="container my-5">
+    <h3 class="fw-bold text-dark text-center mb-4">Explore Practice Modules</h3>
+    
+    <div class="row g-4 justify-content-center">
+      <!-- 1. Email Account Creation -->
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 h-100 rounded-4 transition-hover">
+          <div class="card-body text-center p-4 d-flex flex-column">
+            <div class="fs-1 text-primary mb-2">📧</div>
+            <h5 class="fw-bold">Email Account Creation</h5>
+            <p class="text-muted small flex-grow-1">Learn step-by-step how to choose a username, create strong passwords, and verify with mobile OTP.</p>
+            <a href="email-creation-sim.html" class="btn btn-outline-primary rounded-pill w-100 fw-bold mt-3">Practice Email</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. ATM Simulator -->
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 h-100 rounded-4 transition-hover">
+          <div class="card-body text-center p-4 d-flex flex-column">
+            <div class="fs-1 text-primary mb-2">🏧</div>
+            <h5 class="fw-bold">ATM Machine Practice</h5>
+            <p class="text-muted small flex-grow-1">Learn how to insert your card, enter your PIN securely, check balances, and withdraw cash step-by-step.</p>
+            <a href="atm-sim.html" class="btn btn-outline-primary rounded-pill w-100 fw-bold mt-3">Practice ATM</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Official Form Application -->
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 h-100 rounded-4 transition-hover">
+          <div class="card-body text-center p-4 d-flex flex-column">
+            <div class="fs-1 text-primary mb-2">📝</div>
+            <h5 class="fw-bold">Official Application Form</h5>
+            <p class="text-muted small flex-grow-1">Practice filling online government scheme applications, uploading details, and verifying with OTPs.</p>
+            <a href="forms-sim.html" class="btn btn-outline-primary rounded-pill w-100 fw-bold mt-3">Practice Forms</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Digital Payments Practice -->
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 h-100 rounded-4 transition-hover">
+          <div class="card-body text-center p-4 d-flex flex-column">
+            <div class="fs-1 text-primary mb-2">💳</div>
+            <h5 class="fw-bold">Digital Payments</h5>
+            <p class="text-muted small flex-grow-1">Simulate UPI and net banking money transfers safely in a sandbox environment without real money.</p>
+            <a href="payment-sim.html" class="btn btn-outline-primary rounded-pill w-100 fw-bold mt-3">Practice Payments</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Cyber Safety Quiz -->
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 h-100 rounded-4 transition-hover">
+          <div class="card-body text-center p-4 d-flex flex-column">
+            <div class="fs-1 text-primary mb-2">🛡️</div>
+            <h5 class="fw-bold">Cyber Safety Quiz</h5>
+            <p class="text-muted small flex-grow-1">Test your skills on identifying phishing messages, fake phone calls, and keeping your accounts safe.</p>
+            <a href="safety-quiz.html" class="btn btn-outline-primary rounded-pill w-100 fw-bold mt-3">Take Safety Quiz</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white border-top py-4 text-center text-muted small">
+    <div class="container">
+      &copy; 2026 Digital Practice Lab. Designed for interactive learning.
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/i18n.js"></script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
